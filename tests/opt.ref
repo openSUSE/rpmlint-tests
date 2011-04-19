@@ -1,0 +1,2 @@
+opt: W: suse-filelist-forbidden-opt /opt/foo is not allowed for official SUSE packages
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
