@@ -9,6 +9,22 @@ if [ -z "$1" ]; then
 else
 	specs=($1)
 fi
+rpmlint=/opt/testing/bin/rpmlint
+if [ ! -x "$rpmlint" ]; then
+	rpmlint="${rpmlint##*/}"
+	if ! rpmlint --help >/dev/null 2>/dev/null; then
+		echo "rpmlint not installed"
+		exit 1
+	fi
+	echo "using system rpmlint"
+fi
+check()
+{
+	if [ "${rpmlint:0:1}" = r ]; then
+		set -- -f "$RPMLINT_MINI_CONFIG" "$@"
+	fi
+	$rpmlint "$@"
+}
 for i in "${specs[@]}"; do
 	echo "building $i ..."
 	rpmbuild --quiet --define "_rpmdir $PWD/output/packages" -bb $i
@@ -23,7 +39,7 @@ while read f; do
 	else
 		unset RPMLINT_MINI_CONFIG
 	fi
-	/opt/testing/bin/rpmlint $f > output/$name.out || true
+	check $f > output/$name.out || true
 	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
 	if diff -u tests/$name.ref output/$name.out; then
 		echo "ok"
