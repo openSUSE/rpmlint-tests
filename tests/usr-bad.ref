@@ -1,0 +1,2 @@
+usr-bad: W: suse-filelist-forbidden-fhs23 /usr/dummy is not allowed in FHS 2.3
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
