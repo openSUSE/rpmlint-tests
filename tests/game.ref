@@ -1,0 +1,3 @@
+game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib/blub is not allowed in SUSE
+game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib is not allowed in SUSE
+1 packages and 0 specfiles checked; 2 errors, 0 warnings.

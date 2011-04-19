@@ -1,0 +1,7 @@
+cvs-bad: W: version-control-internal-file /usr/lib/foo/.cvsignore
+cvs-bad: W: version-control-internal-file /usr/lib/foo/CVS
+cvs-bad: W: version-control-internal-file /usr/lib/foo/RCS/asd
+cvs-bad: W: version-control-internal-file /usr/lib/foo/RCS
+cvs-bad: W: version-control-internal-file /usr/lib/foo/bla,v
+cvs-bad: W: version-control-internal-file /usr/lib/foo/CVS/foo
+1 packages and 0 specfiles checked; 0 errors, 6 warnings.

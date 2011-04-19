@@ -1,0 +1,40 @@
+#!/bin/bash
+failed=0
+good=0
+rm -rf output
+cp -rl rpms output
+
+if [ -z "$1" ]; then
+	specs=(tests/*.spec)
+else
+	specs=($1)
+fi
+for i in "${specs[@]}"; do
+	echo "building $i ..."
+	rpmbuild --quiet --define "_rpmdir $PWD/output/packages" -bb $i
+done
+find output/packages -name '*.rpm' -and -not -name *.src.rpm > output/tocheck
+while read f; do
+	name="`rpm --qf '%{name}\n' -qp $f`"
+	echo -n "checking $f ... "
+	if [ -e tests/$name.ignore ]; then
+		RPMLINT_MINI_CONFIG="$PWD/tests/$name.ignore"
+		export RPMLINT_MINI_CONFIG
+	else
+		unset RPMLINT_MINI_CONFIG
+	fi
+	/opt/testing/bin/rpmlint $f > output/$name.out || true
+	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
+	if diff -u tests/$name.ref output/$name.out; then
+		echo "ok"
+		: $((++good))
+	else
+		echo "fail"
+		if [ ! -e tests/$name.ref ]; then
+			echo "ref file missing, here's the rpmlint output:"
+			cat output/$name.out
+		fi
+		: $((++failed))
+	fi
+done < output/tocheck
+echo "good: $good, failed: $failed"
