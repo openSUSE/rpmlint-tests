@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+name="$1"
+if [ -z "$name" -o -e "tests/$name.spec" ]; then
+	echo "specify a name"
+	exit 1
+fi
+sed "s/\(^Name:[ \t]\+\)[^ \t]*/\1$name/" < tests/good.spec > tests/$name.spec
+cp tests/good.ignore tests/$name.ignore
+$EDITOR tests/$name.spec
+echo "now call ./run tests/$name.spec"

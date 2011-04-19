@@ -47,8 +47,11 @@ while read f; do
 	else
 		echo "fail"
 		if [ ! -e tests/$name.ref ]; then
-			echo "ref file missing, here's the rpmlint output:"
+			echo "ref file missing."
+			echo "you may want to copy the following to tests/$name.ref:"
+			echo '++++'
 			cat output/$name.out
+			echo '++++'
 		fi
 		: $((++failed))
 	fi
