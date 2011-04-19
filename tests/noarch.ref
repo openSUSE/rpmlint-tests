@@ -1,3 +1,2 @@
-noarch: E: suse-filelist-forbidden-noarch (Badness: 10000) /lib64/ld-linux.so.2 is not allowed in a noarch package
-noarch: E: arch-independent-package-contains-binary-or-object (Badness: 499) /lib64/ld-linux.so.2
-1 packages and 0 specfiles checked; 2 errors, 0 warnings.
+noarch: E: arch-independent-package-contains-binary-or-object (Badness: 499) /bin/ls
+1 packages and 0 specfiles checked; 1 errors, 0 warnings.

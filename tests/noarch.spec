@@ -21,14 +21,14 @@ officia deserunt mollit anim id est laborum.
 %build
 
 %install
-install -D -m 755 /lib/ld-linux.so.2 %buildroot/lib64/ld-linux.so.2
+install -D -m 755 /bin/ls %buildroot/bin/ls
 
 %clean
 rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-/lib64/ld-linux.so.2
+/bin/ls
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
