@@ -1,0 +1,2 @@
+empty: E: suse-filelist-empty (Badness: 10000) packages without any files are not allowed in SUSE
+1 packages and 0 specfiles checked; 1 errors, 0 warnings.
