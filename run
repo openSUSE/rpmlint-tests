@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 failed=0
 good=0
 rm -rf output
@@ -57,3 +58,4 @@ while read f; do
 	fi
 done < output/tocheck
 echo "good: $good, failed: $failed"
+[ "$failed" = 0 ]
