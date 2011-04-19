@@ -21,10 +21,28 @@ if [ ! -x "$rpmlint" ]; then
 fi
 check()
 {
-	if [ "${rpmlint:0:1}" = r ]; then
-		set -- -f "$RPMLINT_MINI_CONFIG" "$@"
+	local name="$1"
+	shift
+	if [ -e tests/$name.ignore ]; then
+		if [ "${rpmlint:0:1}" = r ]; then
+			set -- -f "$PWD/tests/$name.ignore" "$@"
+		else
+			RPMLINT_MINI_CONFIG="$PWD/tests/$name.ignore"
+			export RPMLINT_MINI_CONFIG
+		fi
+	else
+		unset RPMLINT_MINI_CONFIG
 	fi
-	$rpmlint "$@"
+	set -- $rpmlint "$@"
+	if [ -e tests/$name.env ]; then
+		local line
+		local env=()
+		while read line; do
+			env+=("$line")
+		done < tests/$name.env
+		set -- env "${env[@]}" "$@"
+	fi
+	"$@"
 }
 for i in "${specs[@]}"; do
 	echo "building $i ..."
@@ -34,13 +52,7 @@ find output/packages -name '*.rpm' -and -not -name *.src.rpm > output/tocheck
 while read f; do
 	name="`rpm --qf '%{name}\n' -qp $f`"
 	echo -n "checking $f ... "
-	if [ -e tests/$name.ignore ]; then
-		RPMLINT_MINI_CONFIG="$PWD/tests/$name.ignore"
-		export RPMLINT_MINI_CONFIG
-	else
-		unset RPMLINT_MINI_CONFIG
-	fi
-	check $f > output/$name.out || true
+	check "$name" "$f" > output/$name.out || true
 	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
 	if diff -u tests/$name.ref output/$name.out; then
 		echo "ok"
