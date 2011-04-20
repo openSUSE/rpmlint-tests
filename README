@@ -1,0 +1,21 @@
+rpmlint test suite.
+
+You need to install rpmlint-Factory to run the tests locally. You
+may "rpm -e --nodeps rpmlint-mint" and install rpmlint instead if
+you need to adjust rpmlint files. The test suite works with both
+rpmlint and rpmlint-mini.
+
+each tests consists of several files in tests/:
+
+name.spec:	the spec file. It must produce an rpm of the same name.
+name.ref:       reference rpmlint output
+name.ignore:	rpmlintrc to ignore unrelated errors (optional)
+name.env:       extra environment variables (optional)
+
+to run all tests just call "./run" or "make test", to run a single
+test call "./run tests/name.spec"
+The script runs rpmbuild on all spec files and then rpmlint on the
+resulting rpms. A test succeeds if the output matches the reference
+output.
+
+To create a new test called 'name' case run "./newtest name"
