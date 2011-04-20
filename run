@@ -3,6 +3,7 @@ set -e
 failed=0
 good=0
 rm -rf output
+mkdir -p rpms
 cp -rl rpms output
 
 if [ -z "$1" ]; then
