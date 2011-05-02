@@ -8,7 +8,9 @@ initscript: W: init-script-without-%stop_on_removal-preun /etc/init.d/boot.bar
 initscript: W: init-script-without-%stop_on_removal-preun /etc/init.d/foo
 initscript: W: init-script-without-%restart_on_update-postun /etc/init.d/boot.bar
 initscript: W: init-script-without-%restart_on_update-postun /etc/init.d/foo
+initscript: W: init-script-without-%insserv_cleanup-postun /etc/init.d/boot.bar
+initscript: W: init-script-without-%insserv_cleanup-postun /etc/init.d/foo
 initscript: W: init-script-runlevel-4 /etc/init.d/foo
 initscript: W: init-script-not-boot_d /etc/init.d/foo B
 initscript: W: init-script-boot_d /etc/init.d/boot.bar
-1 packages and 0 specfiles checked; 0 errors, 13 warnings.
+1 packages and 0 specfiles checked; 0 errors, 15 warnings.
