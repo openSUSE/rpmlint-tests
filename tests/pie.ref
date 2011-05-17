@@ -1,2 +1,2 @@
-pie: W: not-a-position-independent-executable /usr/bin/telnet
+pie: W: non-position-independent-executable /usr/bin/telnet
 1 packages and 0 specfiles checked; 0 errors, 1 warnings.
