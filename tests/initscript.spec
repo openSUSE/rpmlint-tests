@@ -36,6 +36,7 @@ cat <<EOF > %buildroot/etc/init.d/foo
 # Description:       blah blah
 ### END INIT INFO
 # 
+xxx=/var/lock/subsys/blah
 EOF
 cat <<EOF > %buildroot/etc/init.d/boot.bar
 #!/bin/bash

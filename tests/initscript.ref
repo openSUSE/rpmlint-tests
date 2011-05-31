@@ -1,4 +1,5 @@
 initscript: W: suse-missing-rclink foo
+initscript: W: subsys-unsupported /etc/init.d/foo
 initscript: W: no-status-entry /etc/init.d/boot.bar
 initscript: W: no-status-entry /etc/init.d/foo
 initscript: W: no-reload-entry /etc/init.d/boot.bar
@@ -13,4 +14,4 @@ initscript: W: init-script-without-%insserv_cleanup-postun /etc/init.d/foo
 initscript: W: init-script-runlevel-4 /etc/init.d/foo
 initscript: W: init-script-not-boot_d /etc/init.d/foo B
 initscript: W: init-script-boot_d /etc/init.d/boot.bar
-1 packages and 0 specfiles checked; 0 errors, 15 warnings.
+1 packages and 0 specfiles checked; 0 errors, 16 warnings.
