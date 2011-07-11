@@ -1,3 +1,4 @@
 #addFilter(" files-duplicate")
 addFilter(" no-manual-page-for-binary ")
+addFilter(" permissions-missing-(verifyscript|requires|postin) ")
 #addFilter(" no-binary")

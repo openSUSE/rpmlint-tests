@@ -21,6 +21,8 @@ officia deserunt mollit anim id est laborum.
 
 %install
 install -D -m 755 /bin/ls %buildroot/usr/bin/telnet
+install -D -m 755 /bin/mount %buildroot/bin/mount
+
 
 %clean
 rm -rf %buildroot
@@ -28,6 +30,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 /usr/bin/telnet
+/bin/mount
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
