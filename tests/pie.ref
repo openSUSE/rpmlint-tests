@@ -1,2 +1,3 @@
+pie: W: permissions-incorrect /bin/mount has mode 0755 but should be 04755
 pie: W: non-position-independent-executable /usr/bin/telnet
-1 packages and 0 specfiles checked; 0 errors, 1 warnings.
+1 packages and 0 specfiles checked; 0 errors, 2 warnings.

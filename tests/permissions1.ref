@@ -7,5 +7,5 @@ permissions1: W: permissions-missing-postin missing %set_permissions /bin/su in 
 permissions1: W: permissions-incorrect-owner /bin/su belongs to root:bin but should be root:root
 permissions1: W: permissions-incorrect /bin/su has mode 0755 but should be 04755
 permissions1: E: permissions-file-setuid-bit (Badness: 10000) /bin/ls is packaged with setuid/setgid bits (04755)
-permissions1: W: not-a-position-independent-executable /bin/ls
+permissions1: W: non-position-independent-executable /bin/ls
 1 packages and 0 specfiles checked; 2 errors, 8 warnings.
