@@ -1,7 +1,7 @@
 rpmlint test suite.
 
 You need to install rpmlint-Factory to run the tests locally. You
-may "rpm -e --nodeps rpmlint-mint" and install rpmlint instead if
+may "rpm -e --nodeps rpmlint-mini" and install rpmlint instead if
 you need to adjust rpmlint files. The test suite works with both
 rpmlint and rpmlint-mini.
 
