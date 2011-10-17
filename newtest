@@ -7,5 +7,11 @@ if [ -z "$name" -o -e "tests/$name.spec" ]; then
 fi
 sed "s/\(^Name:[ \t]\+\)[^ \t]*/\1$name/" < tests/good.spec > tests/$name.spec
 cp tests/good.ignore tests/$name.ignore
+if [ -z "$EDITOR" ]; then
+    echo "EDITOR environment variable not set."
+    echo "Edit tests/$name.spec with your favorite editor."
+    echo "Then call ./run tests/$name.spec"
+    exit 0
+fi
 $EDITOR tests/$name.spec
 echo "now call ./run tests/$name.spec"
