@@ -1,0 +1,2 @@
+foo1-devel: W: devel-package-with-non-devel-group Blah
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
