@@ -3,7 +3,7 @@ Version:	0
 Release:	0
 Group:          Development/Tools/Building
 Summary:	Lorem ipsum
-License:	Public Domain
+License:	GPL-2.0+
 BuildRoot:	%_tmppath/%name-%version-build
 Url:            http://www.opensuse.org/
 PreReq:         permissions
