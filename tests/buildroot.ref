@@ -1,0 +1,2 @@
+buildroot: E: file-contains-buildroot (Badness: 10000) /usr/lib/dummy/somefile
+1 packages and 0 specfiles checked; 1 errors, 0 warnings.
