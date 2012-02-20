@@ -1,0 +1,5 @@
+#addFilter(" files-duplicate")
+#addFilter(" no-manual-page-for-binary ")
+#addFilter(" no-binary")
+addFilter(" incoherent-logrotate-file")
+addFilter(" ghost-files-without-postin")
