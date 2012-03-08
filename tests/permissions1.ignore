@@ -1,3 +1,4 @@
 #addFilter(" files-duplicate")
 addFilter(" no-manual-page-for-binary ")
+setBadness("non-position-independent-executable", 0)
 #addFilter(" no-binary")
