@@ -1,0 +1,2 @@
+pam1: W: suse-pam-unauthorized-module pam_foobar.so
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
