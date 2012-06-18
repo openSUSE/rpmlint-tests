@@ -1,6 +1,5 @@
-debug: W: unstripped-binary-or-object /usr/bin/t
 debug: W: static-library-without-symtab /usr/lib/foo/t2.a
 debug: W: static-library-without-debuginfo /usr/lib/foo/t.a
 debug: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/foo/t.a
 debug: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/foo/t2.a
-1 packages and 0 specfiles checked; 2 errors, 3 warnings.
+1 packages and 0 specfiles checked; 2 errors, 2 warnings.

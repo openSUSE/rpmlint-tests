@@ -52,6 +52,9 @@ done
 find output/packages -name '*.rpm' -and -not -name *.src.rpm > output/tocheck
 while read f; do
 	name="`rpm --qf '%{name}\n' -qp $f`"
+	if [ "$name" != "${name%debugsource}" -o "$name" != "${name%debuginfo}"  ]; then
+		continue
+	fi
 	echo -n "checking $f ... "
 	check "$name" "$f" > output/$name.out || true
 	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
