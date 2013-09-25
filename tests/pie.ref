@@ -1,3 +1,4 @@
 pie: W: permissions-incorrect /bin/mount has mode 0755 but should be 04755
 pie: E: non-position-independent-executable (Badness: 10000) /usr/bin/telnet
-1 packages and 0 specfiles checked; 1 errors, 1 warnings.
+pie: W: missing-call-to-setgroups-before-setuid /bin/mount
+1 packages and 0 specfiles checked; 1 errors, 2 warnings.
