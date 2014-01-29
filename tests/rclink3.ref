@@ -1,0 +1,10 @@
+rclink3: W: zero-length /usr/lib/systemd/system/blah.service
+rclink3: W: suse-systemd-shadowed-initscript blah
+rclink3: W: suse-missing-rclink blah
+rclink3: W: no-status-entry /etc/init.d/blah
+rclink3: W: no-reload-entry /etc/init.d/blah
+rclink3: W: init-script-without-%stop_on_removal-preun /etc/init.d/blah
+rclink3: W: init-script-without-%restart_on_update-postun /etc/init.d/blah
+rclink3: W: init-script-without-%insserv_cleanup-postun /etc/init.d/blah
+rclink3: W: incoherent-init-script-name blah ('rclink3', 'rclink3d')
+1 packages and 0 specfiles checked; 0 errors, 9 warnings.

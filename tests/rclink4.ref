@@ -1,0 +1,3 @@
+rclink4: W: zero-length /usr/lib/systemd/system/blah.service
+rclink4: W: suse-missing-rclink blah
+1 packages and 0 specfiles checked; 0 errors, 2 warnings.

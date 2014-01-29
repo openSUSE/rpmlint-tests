@@ -9,7 +9,7 @@ cp -rl rpms output
 if [ -z "$1" ]; then
 	specs=(tests/*.spec)
 else
-	specs=($1)
+	specs=("$@")
 fi
 rpmlint=/opt/testing/bin/rpmlint
 if [ ! -x "$rpmlint" ]; then
