@@ -3,5 +3,5 @@ rclink2: W: no-reload-entry /etc/init.d/blah
 rclink2: W: init-script-without-%stop_on_removal-preun /etc/init.d/blah
 rclink2: W: init-script-without-%restart_on_update-postun /etc/init.d/blah
 rclink2: W: init-script-without-%insserv_cleanup-postun /etc/init.d/blah
-rclink2: W: incoherent-init-script-name blah (u'rclink2', u'rclink2d')
+rclink2: W: incoherent-init-script-name blah ('rclink2', 'rclink2d')
 1 packages and 0 specfiles checked; 0 errors, 6 warnings.
