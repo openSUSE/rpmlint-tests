@@ -5,7 +5,10 @@ test:
 	@./run
 
 dist:
-	@./mktar
+	@obs/mktar
+
+package:
+	@obs/mkpackage
 
 clean:
 	rm -rf output

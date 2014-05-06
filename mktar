@@ -1,9 +1,0 @@
-#!/bin/sh
-set -e
-name=rpmlint-tests
-version=1
-#last_commit=(`git rev-list --timestamp HEAD^..HEAD`)
-#date=`date +%Y%m%d%H%M -d "1970-01-01 00:00 UTC $last_commit seconds"`
-fn=$name-$version.tar.bz2
-git archive --prefix=$name-$version/ HEAD | bzip2 > $fn
-echo "$fn"
