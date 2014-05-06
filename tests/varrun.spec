@@ -23,14 +23,19 @@ officia deserunt mollit anim id est laborum.
 %install
 install -d -m 755 %buildroot/var/lock/foo
 install -D -m 644 /dev/null %buildroot/var/run/bar
+install -d -m 755 %buildroot/run/lock/foo
+install -D -m 644 /dev/null %buildroot/run/bar
 
 %clean
 rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
+%dir /var/run
 %dir /var/lock/foo
 /var/run/bar
+%dir /run/lock/foo
+/run/bar
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de

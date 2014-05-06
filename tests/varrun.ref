@@ -1,3 +1,6 @@
-varrun: E: non-ghost-in-var-run (Badness: 10000) /var/run/bar
-varrun: E: non-ghost-in-var-lock (Badness: 10000) /var/lock/foo
-1 packages and 0 specfiles checked; 2 errors, 0 warnings.
+varrun: E: non-ghost-in-run (Badness: 10000) /run/bar
+varrun: E: non-ghost-in-run (Badness: 10000) /run/lock/foo
+varrun: E: dir-or-file-in-var-run (Badness: 10000) /var/run
+varrun: E: dir-or-file-in-var-run (Badness: 10000) /var/run/bar
+varrun: E: dir-or-file-in-var-lock (Badness: 10000) /var/lock/foo
+1 packages and 0 specfiles checked; 5 errors, 0 warnings.
