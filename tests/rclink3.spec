@@ -31,6 +31,18 @@ EOF
 install -m 755 blah %buildroot/etc/init.d/blah
 install -m 644 /dev/null %buildroot/usr/lib/systemd/system/blah.service
 
+%pre
+%service_add_pre blah.service
+
+%preun
+%service_del_preun blah.service
+
+%post
+%service_add_post blah.service
+
+%postun
+%service_del_postun blah.service
+
 %clean
 rm -rf %buildroot
 

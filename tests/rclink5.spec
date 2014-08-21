@@ -27,6 +27,18 @@ install -d -m 755 %buildroot/usr/sbin
 install -m 644 /dev/null %buildroot/usr/lib/systemd/system/blah.service
 ln -s /etc/init.d/blah %buildroot/usr/sbin/rcblah
 
+%pre
+%service_add_pre blah.service
+
+%preun
+%service_del_preun blah.service
+
+%post
+%service_add_post blah.service
+
+%postun
+%service_del_postun blah.service
+
 %clean
 rm -rf %buildroot
 
