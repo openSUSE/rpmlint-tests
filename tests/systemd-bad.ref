@@ -1,0 +1,6 @@
+systemd-bad: W: systemd-service-without-service_del_preun foobar.service
+systemd-bad: W: systemd-service-without-service_del_postun foobar.service
+systemd-bad: W: systemd-service-without-service_add_pre foobar.service
+systemd-bad: W: systemd-service-without-service_add_post foobar.service
+systemd-bad: W: suse-missing-rclink foobar
+1 packages and 0 specfiles checked; 0 errors, 5 warnings.
