@@ -20,7 +20,10 @@ officia deserunt mollit anim id est laborum.
 %build
 
 %install
-install -D -m 755 /bin/ls %buildroot/usr/bin/telnet
+mkdir -p %buildroot/usr/bin/
+echo "int main() {}" >xx.c
+gcc -O2 -fno-PIE xx.c -o     %buildroot/usr/bin/telnet
+strip %buildroot/usr/bin/telnet
 install -D -m 755 /bin/mount %buildroot/bin/mount
 
 
