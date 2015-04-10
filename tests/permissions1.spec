@@ -23,7 +23,10 @@ officia deserunt mollit anim id est laborum.
 install -d -m 755 %buildroot/etc/permissions.d
 install -d -m 755 %buildroot/bin
 echo "/bin/foo root:root 4755" > %buildroot/etc/permissions.d/test
-cp /bin/ls %buildroot/bin
+
+echo "int main() {}" > xx.c
+gcc -fno-PIE -O2 xx.c -o %buildroot/bin/ls
+strip %buildroot/bin/ls
 cp /bin/su %buildroot/bin
 
 %clean
