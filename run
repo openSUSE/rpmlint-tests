@@ -50,6 +50,7 @@ for i in "${specs[@]}"; do
 	rpmbuild --quiet --define "_rpmdir $PWD/output/packages" -bb $i
 done
 find output/packages -name '*.rpm' -and -not -name *.src.rpm > output/tocheck
+fail_names=()
 while read f; do
 	name="`rpm --qf '%{name}\n' -qp $f`"
 	if [ "$name" != "${name%debugsource}" -o "$name" != "${name%debuginfo}"  ]; then
@@ -71,7 +72,9 @@ while read f; do
 			echo '++++'
 		fi
 		: $((++failed))
+		fail_names+=($name)
 	fi
 done < output/tocheck
 echo "good: $good, failed: $failed"
+[ -z "$fail_names" ] || echo "failed tests: ${fail_names[@]}"
 [ "$failed" = 0 ]
