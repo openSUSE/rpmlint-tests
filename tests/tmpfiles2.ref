@@ -1,0 +1,2 @@
+tmpfiles2: W: tmpfile-not-regular-file /usr/lib/tmpfiles.d/foo.conf
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
