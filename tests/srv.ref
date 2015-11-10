@@ -1,3 +1,4 @@
 srv: E: suse-filelist-forbidden-srv (Badness: 10000) /usr/local/ftp is not allowed in SUSE
 srv: W: suse-filelist-forbidden-fhs23 /usr/local is not allowed in FHS 2.3
-1 packages and 0 specfiles checked; 1 errors, 1 warnings.
+srv: W: call-to-mktemp /usr/local/ftp/foo
+1 packages and 0 specfiles checked; 1 errors, 2 warnings.
