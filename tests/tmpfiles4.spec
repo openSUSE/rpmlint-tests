@@ -31,6 +31,9 @@ EOF
 %clean
 rm -rf %buildroot
 
+%post
+%tmpfiles_create %_tmpfilesdir/foo.conf
+
 %files
 %defattr(-,root,root)
 /usr/lib/tmpfiles.d
