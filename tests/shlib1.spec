@@ -20,20 +20,20 @@ officia deserunt mollit anim id est laborum.
 %build
 
 %install
-install -d -m 755 %buildroot%_libdir
+install -d -m 755 %buildroot/usr/lib
 echo "void foobar() {}" >xx.c
-gcc -O2 -shared -Wl,-soname,libfoo.so.1 xx.c -o %buildroot%_libdir/libfoo.so.1
-strip %buildroot%_libdir/libfoo.so.1
-ln -s libfoo.so.1 %buildroot%_libdir/libfoo.so
-gcc -O2 -shared -Wl,-soname,libfoo-2.so xx.c -o %buildroot%_libdir/libfoo-2.so
+gcc -O2 -shared -Wl,-soname,libfoo.so.1 xx.c -o %buildroot/usr/lib/libfoo.so.1
+strip %buildroot/usr/lib/libfoo.so.1
+ln -s libfoo.so.1 %buildroot/usr/lib/libfoo.so
+gcc -O2 -shared -Wl,-soname,libfoo-2.so xx.c -o %buildroot/usr/lib/libfoo-2.so
 # should cause no error
-echo foobar > %buildroot%_libdir/libfoo-2.so.foo
+echo foobar > %buildroot/usr/lib/libfoo-2.so.foo
 
 %clean
 rm -rf %buildroot
 
 %files
-%_libdir/*
+/usr/lib/*
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
