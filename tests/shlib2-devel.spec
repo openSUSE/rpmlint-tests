@@ -27,7 +27,7 @@ strip %buildroot%_libdir/libfoo.so.1
 ln -s libfoo.so.1 %buildroot%_libdir/libfoo.so
 gcc -O2 -shared -Wl,-soname,libfoo-2.so xx.c -o %buildroot%_libdir/libfoo-2.so
 # should cause no error
-cp /etc/motd %buildroot%_libdir/libfoo-2.so.foo
+echo foobar > %buildroot%_libdir/libfoo-2.so.foo
 
 %clean
 rm -rf %buildroot
