@@ -1,0 +1,2 @@
+chroot: W: missing-call-to-chdir-with-chroot /usr/bin/call_chroot
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
