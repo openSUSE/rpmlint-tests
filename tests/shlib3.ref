@@ -1,0 +1,2 @@
+shlib3: E: shlib-policy-name-error (Badness: 10000) libfoo3
+1 packages and 0 specfiles checked; 1 errors, 0 warnings.
