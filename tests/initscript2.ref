@@ -1,2 +1,0 @@
-initscript2: W: suse-deprecated-init-script /etc/init.d/foo
-1 packages and 0 specfiles checked; 0 errors, 1 warnings.
