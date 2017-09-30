@@ -1,7 +1,7 @@
 gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyaddr
-gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname2
-gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname
-gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname2_r
 gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyaddr_r
+gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname
+gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname2
+gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname2_r
 gethostbyname: I: binary-or-shlib-calls-gethostbyname /usr/bin/call_gethostbyname_r
 1 packages and 0 specfiles checked; 0 errors, 0 warnings.

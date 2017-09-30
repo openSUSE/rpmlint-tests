@@ -1,6 +1,6 @@
+logrotate2: W: logrotate-duplicate /var/log/foo5
+logrotate2: W: suse-logrotate-log-dir-not-packaged /var/log/foo6
 logrotate2: W: suse-logrotate-user-writable-log-dir /var/log/foo1 daemon:root 0700
 logrotate2: W: suse-logrotate-user-writable-log-dir /var/log/foo2 root:daemon 0770
 logrotate2: W: suse-logrotate-user-writable-log-dir /var/log/foo3 daemon:root 0555
-logrotate2: W: suse-logrotate-log-dir-not-packaged /var/log/foo6
-logrotate2: W: logrotate-duplicate /var/log/foo5
 1 packages and 0 specfiles checked; 0 errors, 5 warnings.

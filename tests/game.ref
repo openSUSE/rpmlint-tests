@@ -1,5 +1,5 @@
-game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib/blub is not allowed in SUSE
-game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib is not allowed in SUSE
 game: W: call-to-mktemp /usr/games/foo
 game: W: call-to-mktemp /usr/games/lib/blub
+game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib is not allowed in SUSE
+game: E: suse-filelist-forbidden-games (Badness: 10000) /usr/games/lib/blub is not allowed in SUSE
 1 packages and 0 specfiles checked; 2 errors, 2 warnings.

@@ -1,11 +1,12 @@
-permissions1: E: permissions-unauthorized-file (Badness: 10000) /etc/permissions.d/test
-permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e /bin/ls
-permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e /bin/su
-permissions1: W: permissions-missing-requires missing 'permissions' in PreReq
+permissions1: W: non-position-independent-executable /bin/ls
+permissions1: W: permissions-incorrect /bin/su has mode 0755 but should be 04755
+permissions1: W: permissions-incorrect-owner /bin/su belongs to root:bin but should be root:root
 permissions1: W: permissions-missing-postin missing %set_permissions /bin/ls in %post
 permissions1: W: permissions-missing-postin missing %set_permissions /bin/su in %post
-permissions1: W: permissions-incorrect-owner /bin/su belongs to root:bin but should be root:root
-permissions1: W: permissions-incorrect /bin/su has mode 0755 but should be 04755
+permissions1: W: permissions-missing-requires missing 'permissions' in PreReq
+permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e /bin/ls
+permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e /bin/su
+permissions1: W: position-independent-executable-suggested /bin/ls
 permissions1: E: permissions-file-setuid-bit (Badness: 10000) /bin/ls is packaged with setuid/setgid bits (04755)
-permissions1: W: non-position-independent-executable /bin/ls
-1 packages and 0 specfiles checked; 2 errors, 8 warnings.
+permissions1: E: permissions-unauthorized-file (Badness: 10000) /etc/permissions.d/test
+1 packages and 0 specfiles checked; 2 errors, 9 warnings.

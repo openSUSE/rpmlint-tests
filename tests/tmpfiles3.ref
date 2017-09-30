@@ -1,5 +1,5 @@
-tmpfiles3: W: zero-length /var/log/foo
-tmpfiles3: W: tmpfile-not-ghost /var/log/foo
-tmpfiles3: W: postin-without-tmpfile-creation /usr/lib/tmpfiles.d/foo.conf
 tmpfiles3: W: non-ghost-file /var/log/foo
+tmpfiles3: W: postin-without-tmpfile-creation /usr/lib/tmpfiles.d/foo.conf
+tmpfiles3: W: tmpfile-not-ghost /var/log/foo
+tmpfiles3: W: zero-length /var/log/foo
 1 packages and 0 specfiles checked; 0 errors, 4 warnings.

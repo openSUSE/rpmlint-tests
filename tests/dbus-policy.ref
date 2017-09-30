@@ -1,3 +1,3 @@
-dbus-policy: E: suse-dbus-unauthorized-service (Badness: 10000) /usr/share/dbus-1/system-services/org.opensuse.rpmlintfail.service
 dbus-policy: E: suse-dbus-unauthorized-service (Badness: 10000) /etc/dbus-1/system.d/org.opensuse.rpmlintfail.conf
+dbus-policy: E: suse-dbus-unauthorized-service (Badness: 10000) /usr/share/dbus-1/system-services/org.opensuse.rpmlintfail.service
 1 packages and 0 specfiles checked; 2 errors, 0 warnings.

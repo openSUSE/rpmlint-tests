@@ -1,5 +1,5 @@
-rclink2: W: suse-deprecated-init-script /etc/init.d/blah
-rclink2: W: no-status-entry /etc/init.d/blah
-rclink2: W: no-reload-entry /etc/init.d/blah
 rclink2: W: incoherent-init-script-name blah ('rclink2', 'rclink2d')
+rclink2: W: no-reload-entry /etc/init.d/blah
+rclink2: W: no-status-entry /etc/init.d/blah
+rclink2: W: suse-deprecated-init-script /etc/init.d/blah
 1 packages and 0 specfiles checked; 0 errors, 4 warnings.
