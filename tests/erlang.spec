@@ -28,14 +28,14 @@ EOF
 erlc +no_debug_info m.erl 
 
 %install
-install -D -m 644 m.beam %buildroot%_libdir/erlang/m.beam
+install -D -m 644 m.beam %buildroot/usr/lib/erlang/m.beam
 
 %clean
 rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%_libdir/erlang/m.beam
+/usr/lib/erlang/m.beam
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de

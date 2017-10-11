@@ -1,1 +1,2 @@
 addCheck("ErlangCheck")
+addFilter(" no-binary")
