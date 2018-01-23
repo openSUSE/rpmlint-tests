@@ -1,0 +1,5 @@
+desktopfile-bad-section: W: desktopfile-missing-header /usr/share/applications/rpmlint-test.desktop
+desktopfile-bad-section: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop file contains entry "Name=rpmlint-test" before the first group, but only comments are accepted before the first group
+desktopfile-bad-section: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop file contains group "Bad Section", but groups extending the format should start with "X-"
+desktopfile-bad-section: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop first group is not "Desktop Entry"
+1 packages and 0 specfiles checked; 0 errors, 4 warnings.

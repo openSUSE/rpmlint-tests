@@ -1,0 +1,4 @@
+desktopfile-bad-duplicate: W: desktopfile-duplicate-section /usr/share/applications/rpmlint-test.desktop [Desktop Entry]
+desktopfile-bad-duplicate: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop file contains multiple groups named "Desktop Entry", but multiple groups may not have the same name
+desktopfile-bad-duplicate: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop file contains multiple keys named "Name" in group "Desktop Entry"
+1 packages and 0 specfiles checked; 0 errors, 3 warnings.

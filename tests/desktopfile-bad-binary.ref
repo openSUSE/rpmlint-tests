@@ -1,0 +1,2 @@
+desktopfile-bad-binary: W: desktopfile-without-binary /usr/share/applications/rpmlint-test.desktop rpmlint-test
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
