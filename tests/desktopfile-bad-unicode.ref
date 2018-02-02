@@ -1,0 +1,4 @@
+desktopfile-bad-unicode: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop No valid Unicode
+desktopfile-bad-unicode: W: invalid-desktopfile /usr/share/applications/rpmlint-test.desktop value "rpmlint-test umlaut \xe4\xf6\xfc " for locale string key "Name[de]" in group "Desktop Entry" contains invalid UTF-8 characters, locale string values should be encoded in UTF-8
+desktopfile-bad-unicode: W: non-utf8-desktopfile /usr/share/applications/rpmlint-test.desktop
+1 packages and 0 specfiles checked; 0 errors, 3 warnings.
