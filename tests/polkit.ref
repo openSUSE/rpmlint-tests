@@ -1,6 +1,6 @@
 polkit: I: polkit-cant-acquire-privilege org.opensuse.test.bar (no:auth_admin:auth_admin)
-polkit: W: polkit-untracked-privilege org.opensuse.test.bar (no:auth_admin:auth_admin)
-polkit: W: polkit-untracked-privilege org.opensuse.test.foo (auth_admin:auth_admin:auth_admin)
 polkit: E: polkit-unauthorized-privilege (Badness: 10000) org.opensuse.test.baz (auth_admin:auth_admin:auth_self)
 polkit: E: polkit-unauthorized-privilege (Badness: 10000) org.opensuse.test.baz2 (auth_admin:auth_admin:yes)
-1 packages and 0 specfiles checked; 2 errors, 2 warnings.
+polkit: E: polkit-untracked-privilege (Badness: 10000) org.opensuse.test.bar (no:auth_admin:auth_admin)
+polkit: E: polkit-untracked-privilege (Badness: 10000) org.opensuse.test.foo (auth_admin:auth_admin:auth_admin)
+1 packages and 0 specfiles checked; 4 errors, 0 warnings.
