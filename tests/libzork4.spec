@@ -52,9 +52,7 @@ ln -s libzork.so.%{soname} %buildroot/usr/lib/libzork.so
 %clean
 rm -rf %buildroot
 
-%post -n libzork%{soname} -p /sbin/ldconfig
 
-%postun -n libzork%{soname} -p /sbin/ldconfig
 
 %files -n libzork%{soname}
 /usr/lib/*so.*
