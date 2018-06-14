@@ -38,10 +38,6 @@ ln -s libfoo.so.3 %buildroot/usr/lib/libfoo.so
 %clean
 rm -rf %buildroot
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
-
 %files
 /usr/lib/*so.*
 

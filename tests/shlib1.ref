@@ -1,7 +1,3 @@
 shlib1: W: unstripped-binary-or-object /usr/lib/libfoo-2.so
 shlib1: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/libfoo.so
-shlib1: E: library-without-ldconfig-postin (Badness: 300) /usr/lib/libfoo-2.so
-shlib1: E: library-without-ldconfig-postin (Badness: 300) /usr/lib/libfoo.so.1
-shlib1: E: library-without-ldconfig-postun (Badness: 300) /usr/lib/libfoo-2.so
-shlib1: E: library-without-ldconfig-postun (Badness: 300) /usr/lib/libfoo.so.1
-1 packages and 0 specfiles checked; 5 errors, 1 warnings.
+1 packages and 0 specfiles checked; 1 errors, 1 warnings.
