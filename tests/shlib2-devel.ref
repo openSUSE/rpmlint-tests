@@ -2,8 +2,8 @@ shlib2-devel: W: no-dependency-on shlib2*/shlib2-libs/libshlib2*
 shlib2-devel: W: non-devel-file-in-devel-package /usr/lib/libfoo-2.so
 shlib2-devel: W: non-devel-file-in-devel-package /usr/lib/libfoo.so.1
 shlib2-devel: W: unstripped-binary-or-object /usr/lib/libfoo-2.so
-shlib2-devel: E: library-without-ldconfig-postin (Badness: 300) /usr/lib/libfoo-2.so
-shlib2-devel: E: library-without-ldconfig-postin (Badness: 300) /usr/lib/libfoo.so.1
-shlib2-devel: E: library-without-ldconfig-postun (Badness: 300) /usr/lib/libfoo-2.so
-shlib2-devel: E: library-without-ldconfig-postun (Badness: 300) /usr/lib/libfoo.so.1
-1 packages and 0 specfiles checked; 4 errors, 4 warnings.
+shlib2-devel: W: library-without-ldconfig-postin /usr/lib/libfoo-2.so
+shlib2-devel: W: library-without-ldconfig-postin /usr/lib/libfoo.so.1
+shlib2-devel: W: library-without-ldconfig-postun /usr/lib/libfoo-2.so
+shlib2-devel: W: library-without-ldconfig-postun /usr/lib/libfoo.so.1
+1 packages and 0 specfiles checked; 0 errors, 8 warnings.
