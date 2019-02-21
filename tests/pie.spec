@@ -24,7 +24,7 @@ mkdir -p %buildroot/usr/bin/
 echo "int main() {}" >xx.c
 gcc -O2 -fno-PIE xx.c -o     %buildroot/usr/bin/telnet
 strip %buildroot/usr/bin/telnet
-install -D -m 755 /bin/mount %buildroot/bin/mount
+install -D -m 755 /bin/mount %buildroot/usr/bin/mount
 
 
 %clean
@@ -33,7 +33,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 /usr/bin/telnet
-/bin/mount
+/usr/bin/mount
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
