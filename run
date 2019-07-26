@@ -59,18 +59,24 @@ while read f; do
 	echo -n "checking $f ... "
 	check "$name" "$f" > output/$name.out || true
 	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
-	if diff -u tests/$name.ref output/$name.out; then
-		echo "ok"
-		: $((++good))
-	else
-		echo "fail"
-		if [ ! -e tests/$name.ref ]; then
+	reffile="tests/$name.$(uname -i).ref"
+	if [ ! -e "$reffile" ]; then
+		reffile="tests/$name.ref"
+		if [ ! -e "$reffile" ]; then
 			echo "ref file missing."
-			echo "you may want to copy the following to tests/$name.ref:"
+			echo "you may want to copy the following to $reffile:"
 			echo '++++'
 			cat output/$name.out
 			echo '++++'
 		fi
+	fi
+	echo "testing against $reffile"
+
+	if diff -u $reffile output/$name.out; then
+		echo "ok"
+		: $((++good))
+	else
+		echo "fail"
 		: $((++failed))
 		fail_names+=($name)
 	fi
