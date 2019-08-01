@@ -21,8 +21,8 @@ int main(void)
 	return 0;
 }
 EOF
-gcc -g $RPM_OPT_FLAGS -o t.o -c t.c
-gcc -g $RPM_OPT_FLAGS -o t t.o
+gcc -g $RPM_OPT_FLAGS -fno-lto -o t.o -c t.c
+gcc -g $RPM_OPT_FLAGS -fno-lto -o t t.o
 ar rs t.a t.o
 cp -a t.a t2.a
 strip --strip-debug t.a
