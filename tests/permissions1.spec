@@ -21,8 +21,10 @@ officia deserunt mollit anim id est laborum.
 
 %install
 install -d -m 755 %buildroot/etc/permissions.d
+install -d -m 755 %buildroot/usr/share/permissions/permissions.d
 install -d -m 755 %buildroot/bin
 echo "/bin/foo root:root 4755" > %buildroot/etc/permissions.d/test
+echo "/bin/foo root:root 4755" > %buildroot/usr/share/permissions/permissions.d/test
 
 echo "int main() {}" > xx.c
 gcc -fno-PIE -O2 xx.c -o %buildroot/bin/ls
@@ -35,6 +37,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %config /etc/permissions.d/test
+%attr(0644,root,root) /usr/share/permissions/permissions.d/test
 %attr(4755,root,root) /bin/ls
 %attr(0755,root,bin) /bin/su
 

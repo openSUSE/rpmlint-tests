@@ -8,4 +8,5 @@ permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e
 permissions1: W: permissions-missing-verifyscript missing %verify_permissions -e /bin/su
 permissions1: E: permissions-file-setuid-bit (Badness: 10000) /bin/ls is packaged with setuid/setgid bits (04755)
 permissions1: E: permissions-unauthorized-file (Badness: 10000) /etc/permissions.d/test
-1 packages and 0 specfiles checked; 2 errors, 8 warnings.
+permissions1: E: permissions-unauthorized-file (Badness: 10000) /usr/share/permissions/permissions.d/test
+1 packages and 0 specfiles checked; 3 errors, 8 warnings.
