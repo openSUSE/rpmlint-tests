@@ -1,0 +1,9 @@
+debug: W: static-library-without-debuginfo /usr/lib/foo/t.a
+debug: W: static-library-without-symtab /usr/lib/foo/t2.a
+debug: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/foo/t.a
+debug: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/foo/t2.a
+debug: E: lto-bytecode (Badness: 10000) /usr/lib/foo/t.a
+debug: E: lto-bytecode (Badness: 10000) /usr/lib/foo/t2.a
+debug: E: lto-no-text-in-archive (Badness: 10000) /usr/lib/foo/t.a
+debug: E: lto-no-text-in-archive (Badness: 10000) /usr/lib/foo/t2.a
+1 packages and 0 specfiles checked; 6 errors, 2 warnings.
