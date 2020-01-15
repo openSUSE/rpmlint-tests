@@ -59,7 +59,7 @@ while read f; do
 	echo -n "checking $f ... "
 	check "$name" "$f" > output/$name.out || true
 	sed -i "s/^$name\.[^:]\+: /$name: /" output/$name.out
-	reffile="tests/$name.$(uname -i).ref"
+	reffile="tests/$name.$(uname -m).ref"
 	if [ ! -e "$reffile" ]; then
 		reffile="tests/$name.ref"
 		if [ ! -e "$reffile" ]; then
