@@ -1,5 +1,4 @@
 %define soname 42
-%define basename zork
 
 Name:           zork4
 Version:        1.2.3
