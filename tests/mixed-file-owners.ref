@@ -1,0 +1,2 @@
+mixed-file-owners: W: file-parent-ownership-mismatch /usr/share/foo/bar owned by root is stored in directory owned by different user bin
+1 packages and 0 specfiles checked; 0 errors, 1 warnings.
