@@ -23,19 +23,36 @@ officia deserunt mollit anim id est laborum.
 %install
 install -d -m 755 %buildroot/bin
 cp /bin/su %buildroot/bin
+cp /bin/su %buildroot/bin/foo
+printf '\0' >> %buildroot/bin/foo
+cp /bin/su %buildroot/bin/bar
+printf '\0\0' >> %buildroot/bin/bar
+# postfix and sendmail are allowed to install their own permissions file
+mkdir -p %buildroot/etc/permissions.d %buildroot/usr/share/permissions/permissions.d
+echo "/bin/foo root:root 4755" > %buildroot/etc/permissions.d/postfix
+echo "/bin/bar root:root 4755" > %buildroot/usr/share/permissions/permissions.d/sendmail
 
 %clean
 rm -rf %buildroot
 
 %verifyscript
 %verify_permissions -e /bin/su
+%verify_permissions -e /bin/foo
+%verify_permissions -e /bin/bar
 
 %post
 %set_permissions /bin/su
+%set_permissions /bin/foo
+%set_permissions /bin/bar
 
 %files
 %defattr(-,root,root)
 %attr(4755,root,root) /bin/su
+%attr(4755,root,root) /bin/foo
+%attr(4755,root,root) /bin/bar
+%config /etc/permissions.d/postfix
+%attr(0600,root,root) /etc/permissions.d/postfix
+%attr(0600,root,root) /usr/share/permissions/permissions.d/sendmail
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
