@@ -1,0 +1,5 @@
+name: 'Integration test'
+description: 'Clones this repo and rpmlint-checks and runs ./run'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
