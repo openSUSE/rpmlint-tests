@@ -23,13 +23,14 @@ officia deserunt mollit anim id est laborum.
 install -d -m 755 %buildroot/etc/permissions.d
 install -d -m 755 %buildroot/usr/share/permissions/permissions.d
 install -d -m 755 %buildroot/bin
+install -d -m 755 %buildroot/usr/bin
 echo "/bin/foo root:root 4755" > %buildroot/etc/permissions.d/test
 echo "/bin/foo root:root 4755" > %buildroot/usr/share/permissions/permissions.d/test
 
 echo "int main() {}" > xx.c
 gcc -fno-PIE -O2 xx.c -o %buildroot/bin/ls
 strip %buildroot/bin/ls
-cp /bin/su %buildroot/bin
+cp %buildroot/bin/ls %buildroot/usr/bin/su
 
 %clean
 rm -rf %buildroot
@@ -39,7 +40,7 @@ rm -rf %buildroot
 %config /etc/permissions.d/test
 %attr(0644,root,root) /usr/share/permissions/permissions.d/test
 %attr(4755,root,root) /bin/ls
-%attr(0755,root,bin) /bin/su
+%attr(0755,root,bin) /usr/bin/su
 
 %changelog
 * Mon Apr 18 2011 lnussel@suse.de
