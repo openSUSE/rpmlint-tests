@@ -21,35 +21,35 @@ officia deserunt mollit anim id est laborum.
 %build
 
 %install
-install -d -m 755 %buildroot/bin
-cp /bin/su %buildroot/bin
-cp /bin/su %buildroot/bin/foo
-printf '\0' >> %buildroot/bin/foo
-cp /bin/su %buildroot/bin/bar
-printf '\0\0' >> %buildroot/bin/bar
+install -d -m 755 %buildroot/usr/bin
+cp /bin/su %buildroot/usr/bin
+cp /bin/su %buildroot/usr/bin/foo
+printf '\0' >> %buildroot/usr/bin/foo
+cp /bin/su %buildroot/usr/bin/bar
+printf '\0\0' >> %buildroot/usr/bin/bar
 # postfix and sendmail are allowed to install their own permissions file
 mkdir -p %buildroot/etc/permissions.d %buildroot/usr/share/permissions/permissions.d
-echo "/bin/foo root:root 4755" > %buildroot/etc/permissions.d/postfix
-echo "/bin/bar root:root 4755" > %buildroot/usr/share/permissions/permissions.d/sendmail
+echo "/usr/bin/foo root:root 4755" > %buildroot/etc/permissions.d/postfix
+echo "/usr/bin/bar root:root 4755" > %buildroot/usr/share/permissions/permissions.d/sendmail
 
 %clean
 rm -rf %buildroot
 
 %verifyscript
-%verify_permissions -e /bin/su
-%verify_permissions -e /bin/foo
-%verify_permissions -e /bin/bar
+%verify_permissions -e /usr/bin/su
+%verify_permissions -e /usr/bin/foo
+%verify_permissions -e /usr/bin/bar
 
 %post
-%set_permissions /bin/su
-%set_permissions /bin/foo
-%set_permissions /bin/bar
+%set_permissions /usr/bin/su
+%set_permissions /usr/bin/foo
+%set_permissions /usr/bin/bar
 
 %files
 %defattr(-,root,root)
-%attr(4755,root,root) /bin/su
-%attr(4755,root,root) /bin/foo
-%attr(4755,root,root) /bin/bar
+%attr(4755,root,root) /usr/bin/su
+%attr(4755,root,root) /usr/bin/foo
+%attr(4755,root,root) /usr/bin/bar
 %config /etc/permissions.d/postfix
 %attr(0600,root,root) /etc/permissions.d/postfix
 %attr(0600,root,root) /usr/share/permissions/permissions.d/sendmail
