@@ -56,7 +56,7 @@ cat <<EOF >  %buildroot/usr/share/polkit-1/actions/foo.action
       <allow_active>yes</allow_active>
     </defaults>
   </action>
-  <action id="org.gnome.policykit.examples.frobnicate">
+  <action id="org.freedesktop.policykit.example.pkexec.run-frobnicate">
     <defaults>
       <allow_any>yes</allow_any>
       <allow_inactive>yes</allow_inactive>
