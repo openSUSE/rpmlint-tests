@@ -12,8 +12,9 @@ else
 	specs=("$@")
 fi
 rpmlint=/opt/testing/bin/rpmlint
-if [ ! -x "$rpmlint" ]; then
+if ! /usr/bin/test -x "$rpmlint"; then
 	rpmlint="${rpmlint##*/}"
+	rpmlint --help
 	if ! rpmlint --help >/dev/null 2>/dev/null; then
 		echo "rpmlint not installed"
 		exit 1
